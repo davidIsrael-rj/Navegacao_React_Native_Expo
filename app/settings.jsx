@@ -5,7 +5,7 @@ import { router } from "expo-router";
 export default function Settings() {
     
     const goToHome =() =>{
-       router.navigate("/") 
+       router.replace("/") 
     }
     return (
         <View style={[styles.container, { backgroundColor: "#C6DEF1" }]}>

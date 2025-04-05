@@ -7,6 +7,7 @@ export default function Home() {
         <View style={[styles.container, { backgroundColor: "#FAEDCB" }]}>
             <Text>Home</Text>
             <Link href="/user">Ir para Usuários</Link>
+            <Link href="/products">Ir para Produtos</Link>
         </View>
     )
 }
