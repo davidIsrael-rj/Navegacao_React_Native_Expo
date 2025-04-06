@@ -1,16 +1,20 @@
-import { Stack } from "expo-router";
+import { DrawerToggleButton } from "@react-navigation/drawer"
+import { Stack, useNavigation } from "expo-router";
 
-export default function ProductsLayout(){
-    return(
+export default function ProductsLayout() {
+
+    const navigation = useNavigation();
+    return (
         <Stack
-        screenOptions={{
-            headerStyle: { backgroundColor: "#e94560" },
-            headerTintColor: "#FFFF",
-            // headerShown: false
-          }}
+            screenOptions={{
+                headerStyle: { backgroundColor: "#e94560" },
+                headerTintColor: "#FFFF",
+                headerLeft: () => <DrawerToggleButton tintColor="#FFFFFF" />
+                
+            }}
         >
-            <Stack.Screen name="index" options={{title:"Produtos"}}/>
-            <Stack.Screen name="products/[id]" options={{title: "Detalhes"}}/>
+            <Stack.Screen name="index"/>
+            <Stack.Screen name="products/[id]"/>
         </Stack>
     )
 }
